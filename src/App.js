@@ -4,6 +4,7 @@ import List from "./components/List";
 import Note from "./components/Note";
 import axios from "axios";
 import urlFor from "./helpers/urlFor";
+import Flash from "./components/Flash";
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class App extends Component {
       showNote: false,
       notes: [],
       note: {},
-      newTag: false
+      newTag: false,
+      error: ""
     };
   }
 
@@ -62,7 +64,18 @@ class App extends Component {
           showNote: false //the page will transition back to the listing page
         })
       )
-      .catch(err => console.log(err.response.data));
+      .catch(err => {
+        const { errors } = err.response.data;
+        if (errors.content) {
+          this.setState({
+            error: "Missing Note Content!"
+          });
+        } else if (errors.title) {
+          this.setState({
+            error: "Missing Note Title!"
+          });
+        }
+      });
   };
 
   deleteNote = id => {
@@ -94,7 +107,14 @@ class App extends Component {
     axios
       .post(urlFor(`notes/${noteId}/tags`), data)
       .then(res => this.getNote(noteId))
-      .catch(err => console.log(err.response.data));
+      .catch(err => {
+        const { errors } = err.response.data;
+        if (errors.name) {
+          this.setState({
+            error: "Missing Tag Name!"
+          });
+        }
+      });
   };
 
   deleteTag = (noteId, id) => {
@@ -104,8 +124,14 @@ class App extends Component {
       .catch(err => console.log(err.response.data));
   };
 
+  resetError = () => {
+    this.setState({
+      error: ""
+    });
+  };
+
   render() {
-    const { showNote, notes, note, newTag } = this.state; //state 가져오기
+    const { showNote, notes, note, newTag, error } = this.state; //state 가져오기
     const {
       toggleNote,
       getNotes,
@@ -123,6 +149,7 @@ class App extends Component {
         <Nav toggleNote={toggleNote} showNote={showNote} />
         {/* Nav component 에서 불러서 쓸수있게 연결해주는 역할 */}
         {/* Nav 안에 toggleNote method, showNote state를 props로 넣어주기  */}
+        {error && <Flash error={error} resetError={this.resetError} />}
         {showNote ? (
           <Note
             note={note}
