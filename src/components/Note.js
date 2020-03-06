@@ -55,7 +55,8 @@ class Note extends Component {
           onClick={e => this.props.deleteTag(note.id, tag.id)}
         >
           <span className="delete">
-            <MdDelete />
+            <MdDelete className="del" />
+            &nbsp;
           </span>
           {tag.name}
         </div>

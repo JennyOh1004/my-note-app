@@ -1,24 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Shadows+Into+Light&display=swap");
+
 .note-container {
   width: 450px;
-  height: 330px;
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: 0 auto;
   margin-top: 4rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: "Comfortaa", cursive;
 }
 
 .note-form {
   display: absolute;
 }
-
-/* .note-title-input {
-  padding: 2rem;
-  font-size: 1rem;
-  text-align: center;
-  letter-spacing: 1px;
-  font-weight: 400;
-  display: flex;
-} */
 
 .note-title-input {
   flex: 1;
@@ -33,6 +28,7 @@
   letter-spacing: 2px;
   width: 350px;
   font-weight: 500;
+  font-family: "Comfortaa", cursive;
 }
 
 .note-form textarea {
@@ -48,24 +44,27 @@
   width: 340px;
   text-align: center;
   font-weight: 500;
+  font-family: "Comfortaa", cursive;
 }
 
 .note-button {
-  background-color: #e7f5ff;
-  padding: 1.2rem;
-  margin: 1rem;
+  background-color: #e6fcf5;
+  padding: 0.5rem;
   border-radius: 40px;
   text-align: center;
-  letter-spacing: 2px;
   float: right;
+  letter-spacing: 2px;
   outline: none;
   border: none;
   font-size: 15px;
+  color: #38d9a9;
+  font-family: "Comfortaa", cursive;
+  width: 100px;
 }
 
 .note-button:hover {
-  color: #fff;
-  background: #74c0fc;
+  color: #087f5b;
+  background: #e6fcf5;
   transition: all 0.3s linear;
 }
 
@@ -80,11 +79,16 @@
 }
 
 .tag:hover {
-  color: #1864ab;
+  color: #38d9a9;
 }
 
 .delete {
-  color: saddlebrown;
+  color: #000;
+}
+
+.del {
+  margin-top: 10px;
+  font-size: 24px;
 }
 
 .tag-input {

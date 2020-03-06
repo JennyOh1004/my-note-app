@@ -1,23 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Shadows+Into+Light&display=swap");
+
 .nav-container {
-  height: 60px;
-  background: #339af0;
+  height: 75px;
+  background: #63e6be;
 }
 
 .nav-logo {
-  letter-spacing: 2.5px;
+  letter-spacing: 4px;
   font-size: 40px;
   padding: 0.5rem;
   color: #fff;
+  text-transform: uppercase;
+  font-family: "Shadows Into Light", cursive;
 }
 
 .nav-button {
   float: right;
   border-radius: 40px;
-  background: #e7f5ff;
+  background: #e6fcf5;
   padding: 1rem;
   width: 100px;
   height: 20px;
-  color: #1864ab;
+  color: #38d9a9;
   text-align: center;
   letter-spacing: 1px;
+  margin: 1rem;
+  font-family: "Comfortaa", cursive;
+  font-size: 15px;
 }
