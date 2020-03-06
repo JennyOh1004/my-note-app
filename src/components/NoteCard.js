@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { MdDelete } from "react-icons/md";
 import { MdModeEdit } from "react-icons/md";
+import "./NoteCard.css";
 
 //child to List Component
 
@@ -23,7 +24,6 @@ class NoteCard extends Component {
         <div className="note-card-tags">{this.renderTags(note)}</div>
         <span className="note-card-delete" onClick={() => deleteNote(note.id)}>
           <MdDelete />
-          Close
         </span>
 
         <span
@@ -33,7 +33,6 @@ class NoteCard extends Component {
           }}
         >
           <MdModeEdit />
-          Edit
         </span>
       </div>
     );

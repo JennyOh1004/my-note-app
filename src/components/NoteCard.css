@@ -1,0 +1,54 @@
+.note-card-container {
+  width: 450px;
+  height: 350px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 3rem;
+  display: inline-block;
+}
+
+.note-card-title {
+  flex: 1;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 2rem;
+  margin: 1rem;
+
+  text-align: center;
+  letter-spacing: 2px;
+  width: 350px;
+  font-weight: 500;
+}
+
+.note-card-content {
+  padding: 2rem;
+  flex: 1;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 1rem;
+  letter-spacing: 2px;
+  width: 340px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.note-card-tags {
+  margin: 2rem;
+  color: saddlebrown;
+  letter-spacing: 1px;
+  display: list-item;
+}
+
+.note-card-delete {
+  float: right;
+  font-size: 25px;
+}
+
+.note-card-edit {
+  float: right;
+  font-size: 25px;
+}

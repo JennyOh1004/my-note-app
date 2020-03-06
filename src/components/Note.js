@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaTag } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import "./Note.css";
 
 class Note extends Component {
   onSubmit = e => {
@@ -26,9 +27,8 @@ class Note extends Component {
       if (!this.props.newTag) {
         return (
           <span>
-            Tag your note:
-            <FaTag onClick={() => this.props.showTagForm()} />
-            add circle
+            <FaTag className="tag" onClick={() => this.props.showTagForm()} />
+            &nbsp; Add Tag
           </span>
         );
       } else {
@@ -37,7 +37,7 @@ class Note extends Component {
             <input
               className="tag-input"
               type="text"
-              placeholder="Tag Name..."
+              placeholder="Enter Tag Name ..."
               ref={input => (this.name = input)}
             />
           </form>
@@ -56,7 +56,6 @@ class Note extends Component {
         >
           <span className="delete">
             <MdDelete />
-            delete
           </span>
           {tag.name}
         </div>
@@ -81,13 +80,14 @@ class Note extends Component {
             defaultValue={note.title}
             ref={input => (this.title = input)}
           />
+
           <textarea
             className="note-textarea"
             placeholder="Type here..."
             defaultValue={note.content}
             ref={input => (this.content = input)}
           />
-          <input className="note-button" type="submit" value="Submit" />
+          <input className="note-button" type="submit" value="Submit"></input>
         </form>
         <div className="tag-container">
           <div className="tag-button-container">{renderTagForm(note)}</div>

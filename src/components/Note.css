@@ -1,0 +1,96 @@
+.note-container {
+  width: 450px;
+  height: 330px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.note-form {
+  display: absolute;
+}
+
+/* .note-title-input {
+  padding: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 400;
+  display: flex;
+} */
+
+.note-title-input {
+  flex: 1;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 2rem;
+  margin: 1rem;
+  display: flex;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 350px;
+  font-weight: 500;
+}
+
+.note-form textarea {
+  padding: 2.5rem;
+  flex: 1;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  height: 30px;
+  margin: 1rem;
+  letter-spacing: 2px;
+  width: 340px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.note-button {
+  background-color: #e7f5ff;
+  padding: 1.2rem;
+  margin: 1rem;
+  border-radius: 40px;
+  text-align: center;
+  letter-spacing: 2px;
+  float: right;
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+.note-button:hover {
+  color: #fff;
+  background: #74c0fc;
+  transition: all 0.3s linear;
+}
+
+.tag-container {
+  margin: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.tag {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.tag:hover {
+  color: #1864ab;
+}
+
+.delete {
+  color: saddlebrown;
+}
+
+.tag-input {
+  margin: 0.5rem;
+  letter-spacing: 2px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+}

@@ -1,0 +1,23 @@
+.nav-container {
+  height: 60px;
+  background: #339af0;
+}
+
+.nav-logo {
+  letter-spacing: 2.5px;
+  font-size: 40px;
+  padding: 0.5rem;
+  color: #fff;
+}
+
+.nav-button {
+  float: right;
+  border-radius: 40px;
+  background: #e7f5ff;
+  padding: 1rem;
+  width: 100px;
+  height: 20px;
+  color: #1864ab;
+  text-align: center;
+  letter-spacing: 1px;
+}
