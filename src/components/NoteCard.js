@@ -6,13 +6,11 @@ import { MdModeEdit } from "react-icons/md";
 
 class NoteCard extends Component {
   renderTags(note) {
-    if (note.tags) {
-      return note.tags.map((tag, index) => (
-        <div className="tag" key={index}>
-          {tag.name}
-        </div>
-      ));
-    }
+    return note.tags.map((tag, index) => (
+      <span className="note-card-tag" key={index}>
+        {tag.name}
+      </span>
+    ));
   }
 
   render() {
@@ -27,6 +25,7 @@ class NoteCard extends Component {
           <MdDelete />
           Close
         </span>
+
         <span
           className="note-card-edit"
           onClick={() => {

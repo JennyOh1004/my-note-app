@@ -40,7 +40,7 @@ class App extends Component {
       .get(urlFor(`notes/${id}`))
       .then(res =>
         this.setState({
-          notes: res.data,
+          note: res.data,
           showNote: true
         })
       )
@@ -97,6 +97,13 @@ class App extends Component {
       .catch(err => console.log(err.response.data));
   };
 
+  deleteTag = (noteId, id) => {
+    axios
+      .delete(urlFor(`/tags/${id}`))
+      .then(res => this.getNote(noteId))
+      .catch(err => console.log(err.response.data));
+  };
+
   render() {
     const { showNote, notes, note, newTag } = this.state; //state 가져오기
     const {
@@ -107,7 +114,8 @@ class App extends Component {
       deleteNote,
       showTagForm,
       closeTagForm,
-      submitTag
+      submitTag,
+      deleteTag
     } = this; //function 가져오기
 
     return (
@@ -123,6 +131,7 @@ class App extends Component {
             showTagForm={showTagForm}
             closeTagForm={closeTagForm}
             submitTag={submitTag}
+            deleteTag={deleteTag}
           />
         ) : (
           <List

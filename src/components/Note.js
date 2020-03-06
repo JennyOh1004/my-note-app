@@ -27,10 +27,7 @@ class Note extends Component {
         return (
           <span>
             Tag your note:
-            <FaTag
-              className="tag-button"
-              onClick={() => this.props.showTagForm()}
-            />
+            <FaTag onClick={() => this.props.showTagForm()} />
             add circle
           </span>
         );
@@ -49,29 +46,33 @@ class Note extends Component {
     }
   };
 
-  renderTags(note) {
+  renderTags = note => {
     if (note.tags) {
-      return note.tages.map((tag, index) => (
-        <div className="tag" key={index}>
+      return note.tags.map((tag, index) => (
+        <div
+          className="tag"
+          key={index}
+          onClick={e => this.props.deleteTag(note.id, tag.id)}
+        >
           <span className="delete">
             <MdDelete />
+            delete
           </span>
           {tag.name}
         </div>
       ));
     }
-  }
+  };
 
   render() {
-    const { note } = this.props;
+    const { note, closeTagForm } = this.props;
     const { onSubmit, renderTagForm, renderTags } = this;
     return (
       <div className="note-container">
         <form
           className="note-form"
-          onSubmit={e => {
-            onSubmit(e);
-          }}
+          onSubmit={e => onSubmit(e)}
+          onClick={() => closeTagForm()}
         >
           <input
             className="note-title-input"
