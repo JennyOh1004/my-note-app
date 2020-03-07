@@ -24,3 +24,7 @@ I add note functionalities such as this app is set up to trigger custom code whe
 I also add the ability to create, show, update and remove tags on a note. Then, I set up flash notifications that alert the user when validation errors happen.
 
 
+
+
+Heroku: https://note-app-jenny-oh.herokuapp.com/
+Github: https://github.com/JennyOh1004/my-note-app
