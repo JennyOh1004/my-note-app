@@ -1,4 +1,4 @@
-**### Note Taking Application** 
+# Note Taking Application
 
 
 I built a Note App with a fluid user interface using Facebook's JavaScript library, React.
